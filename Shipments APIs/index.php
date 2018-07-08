@@ -121,7 +121,7 @@
         var reciver_name=$("#Reciver_Name_TXT").val();
         var reciver_Address=$("#Reciver_Address_TXT").val();
         var details=$("#Details_TXT").val();
-        $.post("Client/client.php", { api_type: api_type,client_type:"create",
+        $.post("API/client.php", { api_type: api_type,client_type:"create",
                 sender_name: sender_name,sender_Address:sender_Address,
                 reciver_name:reciver_name,reciver_Address:reciver_Address,
                 details:details},
@@ -140,7 +140,7 @@
 
         var Shipment_num=$("#Shipment_num_TXT").val();
 
-        $.post("Client/client.php", {client_type:"Track",
+        $.post("API/client.php", {client_type:"Track",
                 Shipment_num: Shipment_num},
 
             function(data){
